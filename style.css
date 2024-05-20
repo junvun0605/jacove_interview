@@ -1,0 +1,1193 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    width:100%;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0 15px;
+}
+
+
+html,
+body {
+    overflow-x: hidden; 
+}
+
+.banner1, .banner2, .banner3 {
+    padding-right: 10px; 
+    padding-left: 10px; 
+}
+
+.about {
+    padding: 20px;
+    padding-top: 50px;
+}
+
+
+.products {
+    padding: 20px;
+}
+
+
+.contact {
+    padding: 20px;
+    margin-top: 0; 
+}
+
+
+.footer {
+    padding: 20px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "EB Garamond", serif;
+}
+
+h3{
+    font-size: 35px;
+}
+
+
+p, a{
+    font-family: "Raleway", sans-serif;
+    font-size: 22px;
+    font-weight:500;
+}
+
+.nav-item a,
+.footer a{
+    text-decoration: none;
+    color:black;
+    font-weight:500;
+    font-size:24px;
+    margin:20px;
+}
+
+.banner-button-3:hover a:hover{
+    color:#131E31;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    opacity: 0;
+    transition: top 1s ease, opacity 1s ease;
+}
+
+.slide.active {
+    top: 0;
+    opacity: 1;
+}
+
+.details {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner1, .banner2, .banner3 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.banner1 {
+    background-image: url("images/home-banner.jpg");
+}
+
+.banner2 {
+    background-image: url("images/espresso-background.jpg");
+}
+
+.banner3 {
+    background-image: url("images/latte-background.jpg");
+}
+
+.left-content {
+    position: relative;
+    max-width: 50%;
+}
+
+.cappe-product {
+    width: 100%;
+    height: 800px;
+}
+
+.banner-button, .banner-button-2, .banner-button-3 {
+    border-radius: 35px;
+    background-color: white;
+    font-size: 26px;
+    padding: 20px 75px;
+    margin-top: 50px;
+    color: #131E31;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.banner-button:hover {
+    background-color:#131E31;
+    color: white;
+    border-color: white;
+}
+
+.banner-button-2:hover {
+    background-color: #31313B;
+    color: white;
+    border-color: white;
+}
+
+.banner-button-3:hover {
+    background-color: #94660E;
+    color: white;
+    border-color: white;
+}
+
+.banner1 h2, .banner2 h2, .banner3 h2 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.banner1 h1, .banner2 h1, .banner3 h1 {
+    font-weight: 700;
+    font-size: 84px;
+    line-height: 140px;
+    color: rgb(255, 255, 255);
+}
+
+.banner1 p, .banner2 p, .banner3 p {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 45px;
+    color: rgb(255, 255, 255);
+    white-space: pre;
+    text-align: left;
+}
+
+.slide p span{
+    display: block;
+}
+
+.about{
+    position: relative;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 45%;
+    height: 80%;
+    background: #ECE5D3;
+    z-index: -1;
+    border-top-right-radius: 100vmax;
+    border-bottom-right-radius: 100vmax;
+}
+
+.about::after{
+    content:'';
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:18vw;
+    height:auto;
+    z-index: -1;
+    display: block !important;
+    background:center/ contain no-repeat url("images/coffee-background.png");
+    transform: translate(25px, 20%);
+    aspect-ratio: 214 / 219;
+}
+
+.about-left img{
+    border-radius: 20px;
+    height:450px;
+    transition: transform .8s ease;
+
+}
+
+.about-left img:hover{
+    transform: scale(1.1);
+
+}
+
+.about-right{
+    width:550px;
+    padding-left: 100px;
+}
+
+
+.about-right h3{
+    font-weight:600;
+    font-size:45px;
+    margin-bottom: 30px;
+    
+}
+
+.about-right p{
+    font-weight:500;
+    font-size:20px;
+    line-height: 30px;
+    text-align: justify;
+    word-spacing:5px;
+}
+
+.about-button{
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 45px;
+    margin-top: 50px;
+    background-color: #131E31;
+    font-weight: 500;
+}
+.about-button:hover{
+    background-color: white;
+    border-color: #131E31;
+    color: rgb(23, 46, 88);
+    
+}
+
+.col img {
+    margin: 80px; 
+}
+
+.col{
+    text-align: center;
+}
+
+.container-brands{
+    width:100%;
+    background-color: #ECE5D3;
+}
+
+.brands{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:auto;
+    z-index: 0;
+    width:100%;
+}
+
+.display-brands{
+    width:45%;
+    margin-left:550px;
+}
+
+.display-brands h3{
+    font-size:45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.black-coffee-img{
+    border-bottom-left-radius: 25%;
+    height:600px;
+    overflow: hidden;
+}
+
+.black-coffee-img img{
+    transition: transform .8s ease;
+}
+
+.black-coffee-img:hover img {
+    transform: scale(1.1);
+  }
+
+.brands .cappe-brown-img{
+    height:175px;
+}
+
+.brands-button{
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 45px;
+    margin-top: 50px;
+    background-color: rgb(23, 46, 88);
+    font-weight: 500;
+}
+
+.brands-button:hover{
+    background-color: white;
+    border-color: rgb(23, 46, 88);
+    color: rgb(23, 46, 88);
+}
+
+
+.brands::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 159 / 199;
+    z-index: -1;
+    display: block !important;
+    background: top left / contain no-repeat url("images/coffee-leave-background.png");
+    transform: translate(-12%, -7%);
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    text-align: left;
+    margin-top:50px;
+}
+
+.features img{
+    height:150px;
+    margin-bottom: 20px;
+}
+
+.features1,
+.features2,
+.features3{
+    width: 18%;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+    word-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 700px; /* Fixed height for uniform alignment */
+    max-height: 700px; /* Fixed height for uniform alignment */
+    overflow: hidden; /* Hide overflow text */
+    position: relative; /* For positioning the gradient */
+}
+
+.features1 img,
+.features2 img,
+.features3 img {
+    margin-bottom: 20px;
+    align-self: start;
+}
+
+.features1 p,
+.features2 p,
+.features3 p {
+    text-align: justify;
+    flex-grow: 1;
+    overflow: hidden; /* Hide overflowing text */
+    text-overflow: ellipsis; /* Add ellipsis to overflow text */
+    display: -webkit-box; /* Use webkit for multiline ellipsis */
+    -webkit-line-clamp: 25; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    height: 100%;
+    max-height: 520px; 
+}
+
+.products{
+    display: flex;
+    width:100%;
+    align-items: center;
+    padding:100px 20px 0;
+    justify-content: center;
+    position: relative;
+}
+
+.products-right img{
+    height:auto;
+    max-width: 100%;
+}
+
+.products-left{
+    width:47%;
+}
+
+.products-left h5{
+    font-weight: 400;
+    font-size:34px;
+    padding-bottom: 20px;
+}
+
+.products-left h3{
+    font-weight: 700;
+    font-size:64px;
+    line-height:70px;
+    padding-bottom:20px;
+
+}
+
+.text-decoration{
+    width:60%;
+    font-size:22px;
+    line-height:30px;
+    word-spacing: 3px;
+    text-align: justify;
+}
+
+.products button{
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 45px;
+    margin-top: 40px;
+    background-color: rgb(19 30 49);
+    font-weight: 500;
+}
+
+.products button:hover{
+    background-color: white;
+    border-color: rgb(19 30 49);
+    color: rgb(19 30 49);
+}
+
+.products::before{
+    content: '';
+    position: absolute;
+    top: 30%;
+    right: 0;
+    width: 50%;
+    height: 65%;
+    display: block;
+    z-index: -1;
+    background: right center / cover no-repeat url("images/shopnow-background.jpg");
+    border-bottom-left-radius: 150px;
+}
+
+.products::after{
+    content:'';
+    position: absolute;
+    top:65%;
+    left:38%;
+    width:12vw;
+    height:auto;
+    z-index: -1;
+    display: block !important;
+    background:center/ contain no-repeat url("images/coffee-background.png");
+    transform: translate(25px, 20%);
+    aspect-ratio: 214 / 219;
+    transform: scaleX(-1);
+}
+
+.contact{
+    display: flex;
+    background: left / cover no-repeat url("images/contact-background.jpg");
+    margin-top:350px;
+    width: 100%;
+    height:100%;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:50px;
+    position: relative;
+}
+
+.cupcoffee-img{
+    width:50%;
+}
+
+.cupcoffee-img img{
+    width:100%;
+    margin-top:-10%;
+    transition: transform .8s ease-out;
+}
+
+.cupcoffee-img:hover img {
+    transform: scale(1.05);
+}
+
+.contact-form{
+    align-self: flex-end;
+    width:50%;
+    font-size: 45px;
+    color:white;
+    padding: 0 50px;
+    margin-top:250px;
+}
+
+
+.contact::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    height: 350px;
+    width: 50%;
+    z-index: 1;
+    background: center / contain no-repeat url("images/scoopcoffeebean.jpg");
+}
+
+.contact:hover::after {
+    transition: transform .8s ease-out;
+
+}
+
+.contact:hover::after {
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.contact button{
+    border-radius: 35px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 45px;
+    margin-top: 40px;
+    background-color: #00AD4D;
+    font-weight: 500;
+}
+
+.contact button:hover{
+    background-color: rgb(19 30 49);
+    border-color:white;
+    color: #00AD4D;
+}
+
+.cupcoffee-img-mobile{
+    display: none;
+}
+
+.footer{
+    text-align: center;
+    padding-top:50px
+}
+
+.footer-menu{
+    text-align: center;
+}
+
+.footer-menu a{
+    margin-right:100px;
+
+}
+
+.footer-menu a,
+.information,
+.company{
+    font-size: 20px;
+    text-transform: none;
+}
+
+.information,
+.company{
+    word-spacing:3px;
+}
+
+.footer-logo{
+    padding-bottom:20px;
+}
+
+.information{
+    display:flex;
+    justify-content: center;
+    padding-top:40px;
+}
+
+.company{
+    padding-top:40px;
+    border-top: 2px black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.company hr{
+    margin-top:25px;
+    margin-bottom:10px;
+    width:120%;
+}
+
+.space{
+    width:70px;
+}
+
+.hamburger-menu{
+    display:none;
+    flex-direction:column;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Add smooth animation */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.hamburger-menu:hover {
+    transform: scale(1.1); 
+}
+
+.hamburger-menu .line{
+    width:30px;
+    height:3px;
+    background-color:black ;
+    margin: 5px 0;
+    transition: all 0.3s ease; 
+
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, width 0.3s ease; 
+    z-index: 1000;
+}
+
+.menu-overlay.active {
+    transform: translateX(0);
+    width: 100%; 
+
+}
+.menu-overlay a {
+    color: black;
+    font-size: 36px;
+    margin: 20px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.menu-overlay a:hover {
+    color: rgb(23, 46, 88);
+}
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 50px;
+    color: black;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mobile-logo{
+    display: none;
+}
+
+.close-btn:hover {
+    color: rgb(23, 46, 88);
+}
+
+@media only screen and (max-width:1552px) {
+    nav , .nav-item{
+        display: none;
+    }
+    body{
+        overflow-x: hidden;
+        padding:0;
+        margin:0;
+    }
+    .hamburger-menu{
+        display: flex;
+    }
+}
+
+@media (max-width: 1200px) {
+    .left-content {
+        max-width: 60%;
+    }
+
+    .banner1 h2, .banner2 h2, .banner3 h2 {
+        font-size: 50px;
+        line-height: 80px;
+    }
+
+    .banner1 h1, .banner2 h1, .banner3 h1 {
+        font-size: 70px;
+        line-height: 110px;
+    }
+
+    .banner1 p, .banner2 p, .banner3 p {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .cappe-product {
+        height: 600px;
+    }
+
+    .about-right{
+        padding-left:50px;
+    }
+
+    .about-right h3{
+        font-size:35px;
+    }
+
+    .about-right p{
+        font-size:18px;
+        line-height: 28px;
+    }
+
+    .about-left img{
+        height:400px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .banner1, .banner2, .banner3 {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+     .slide p {
+        white-space: normal; 
+    }
+
+    .slide {
+        flex-direction: column;
+    }
+
+    .slide p span {
+        display: inline; 
+        white-space: normal; 
+    }
+   
+    .left-content {
+        max-width: 100%;
+        order:2;
+        margin-top:-30px;
+    }
+
+    .slide img{
+        order:1;
+    }
+
+    .banner1 h2, .banner2 h2, .banner3 h2 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .banner1 h1, .banner2 h1, .banner3 h1 {
+        font-size: 50px;
+        line-height: 70px;
+    }
+
+    .banner1 p, .banner2 p, .banner3 p {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .banner-button, .banner-button-2, .banner-button-3 {
+        font-size: 20px;
+        padding: 15px 50px;
+    }
+
+    .cappe-product {
+        height: 400px;
+    }
+
+    .about{
+        flex-direction: column;
+        width:100%;
+        height:auto;
+        padding:20px;
+        padding-top:50px;
+
+    }
+
+    
+    .about-left img{
+        max-width:100%;
+        padding-bottom:10px;
+        height:auto;
+    }
+
+    .about-right{
+        width:100%;
+        padding-left:0;
+        text-align: left;
+        padding-top:30px
+    }
+
+    .about-right h3{
+        font-size: 30px;
+    }
+
+    .about p{
+        font-size:16px;
+        line-height: 24px;
+    }
+
+    .about button{
+        padding:6px 30px;
+        font-size: 16px;
+    }
+    
+
+    .brands {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .black-coffee-img {
+        order: -1;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .black-coffee-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .display-brands {
+        width: 100%;
+        margin: 0;
+        text-align: left;
+        padding:0 10px;
+    }
+
+    .display-brands h3 {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .brands .cappe-brown-img {
+        height: 100px;
+        width: auto;
+    }
+
+    .brands-button {
+        padding:6px 30px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .features {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        margin-top: 20px;
+        padding:0 10px;
+    }
+
+    .features img {
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .features1,
+    .features2,
+    .features3 {
+        width: 90%;
+        max-height: unset; 
+        min-height: unset;
+    }
+
+    .features1 p,
+    .features2 p,
+    .features3 p {
+        -webkit-line-clamp: unset; 
+        font-size:16px;
+        line-height:24px;
+        font-weight: 600;
+    }
+    
+    .products{
+        flex-direction: column;
+        align-items: center;
+        padding:20px;
+        padding-top:50px;
+    }
+
+    .products-right {
+        order: -1; 
+    }
+
+    .products-left{
+        width: 100%;
+        text-align: left;
+ 
+    }
+
+    .products-left h5{
+        font-size:20px;
+        padding-top: 20px;
+        font-weight:500;
+    }
+
+    .products-left h3{
+        font-size:26px;
+        line-height:30px;
+    }
+
+    .products-left p{
+        font-size:16px;
+        line-height:24px;
+        font-weight: 600;
+
+    }
+
+    .text-decoration {
+        width: 100%; 
+        font-size: 18px; 
+        line-height: 24px; 
+        word-spacing: 2px;
+    }
+
+    .products button {
+        margin-top: 20px; 
+        padding:6px 30px;
+        font-size: 16px;
+    }
+
+    .products::before{
+        display: none;
+    }
+
+    .products-right {
+        position: relative;
+        text-align: center;
+    }
+    
+    .products-right .home-banner-product {
+        position: relative;
+    }
+    
+    .products-right .home-banner-product img {
+        width: 70%;
+        height: auto;
+    }
+
+    .products-right .home-banner-product::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 90%;
+        height: 90%;
+        background: right center / cover no-repeat url("images/shopnow-background.jpg");
+        z-index: -1;
+        border-bottom-left-radius: 150px;
+    }
+
+    .contact{
+        flex-direction: column;
+        align-items: center;
+        padding:0;
+        margin-top:100px;
+    }
+
+    .contact::after{
+        display: none;
+    }
+
+    .cupcoffee-img{
+        width:100%;
+        margin-bottom: -180px; 
+    }
+
+    .contact-form{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 10px;
+    }
+    .contact-form h3{
+        font-size:30px;
+        width:100%;
+    }
+
+    .contact-form button{
+        font-size: 14px;
+        padding:10px 30px;
+    }
+    
+    .footer{
+        width:100%;
+        padding:20px;
+    }
+
+    .footer a{
+        display:flex;
+        align-items: center;
+        margin-right:4px;
+        font-size:16px;
+        border-right: 1px solid black;
+        padding-right:6px;
+    }
+
+    .footer-menu{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .information{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-right:20px;
+    }
+
+    .information p{
+        font-size: 16px;
+    }
+
+    .company hr{
+        margin-top:15px;
+        width:100%;
+    }
+
+    .company p{
+        font-size: 12px;
+    }
+
+    .normal-text{
+        display:none;
+    }
+    .space{
+        display: none;
+    }
+
+    .cappe-product{
+        order:-1;
+    }
+
+    .mobile-img img{
+        width:50%;
+    }
+
+
+}
+
+@media (max-width: 576px) {
+    .banner1 h2, .banner2 h2, .banner3 h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .banner1 h1, .banner2 h1, .banner3 h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .banner1 p, .banner2 p, .banner3 p {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .banner-button, .banner-button-2, .banner-button-3 {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .cappe-product {
+        height: 300px;
+    }
+
+    .about-right h3 {
+        font-size: 24px;
+    }
+
+    .about-right p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .about-button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .about::before {
+        width: 100%;
+        height: 60%;
+        border-radius: 0; 
+    }
+
+    .about::after {
+        width: 25vw;
+    }
+
+    
+}
+
+
+
+
+
+
